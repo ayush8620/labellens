@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LabelLens · Understand any food label in 10 seconds</title>
+<meta name="description" content="Snap a food or cosmetic label and Google Gemma 4 explains ingredients, allergens and what it means for your diet, in English or Hindi.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo">🔍</div>LabelLens</div>
+    <span class="pill">Powered by Google Gemma 4 · open-weight</span>
+  </header>
+  <section class="hero">
+    <h1>Snap a label. Know what you're eating.</h1>
+    <p>Packaged food labels are tiny, technical and often in English only. Take a photo and LabelLens reads it with Gemma 4's vision, explains every ingredient in plain words and flags what matters for <b>your</b> diet, in English, Hindi or Hinglish.</p>
+  </section>
+  <div class="grid">
+    <div class="card">
+      <h2>1 · Label</h2>
+      <div class="drop" id="drop" tabindex="0" role="button" aria-label="Upload label photo">
+        <div id="preview"></div>
+        <div id="dropText">📷 Tap to take / upload a photo of the label<br><span class="small">or drag & drop · JPG, PNG, WebP</span></div>
+        <input type="file" id="file" accept="image/*" capture="environment" hidden>
+      </div>
+      <label for="text">…or paste the ingredients text</label>
+      <textarea id="text" placeholder="Ingredients: Refined wheat flour (maida), sugar, palm oil, invert syrup, milk solids, raising agents (503(ii), 500(ii)), salt, emulsifier (322), artificial flavour (vanilla)…"></textarea>
+      <h2 style="margin-top:16px">2 · About you</h2>
+      <div class="chips" id="profile"></div>
+      <label for="lang">Explain in</label>
+      <select id="lang"><option>English</option><option>Hindi</option><option>Hinglish</option></select>
+      <div class="row" style="margin-top:16px">
+        <button id="go">Explain this label</button>
+        <button class="ghost" id="sample" type="button">Try a sample</button>
+      </div>
+      <div id="error"></div>
+    </div>
+    <div class="card" id="out"><div class="empty">Your plain-language label report appears here.<br><span class="small">Nothing is stored. The photo is sent only to the Gemma 4 API for this one answer.</span></div></div>
+  </div>
+  <footer>LabelLens is an open-source MIT project by Ayush Yadav · Not medical advice · Built at MLH Hacktoberfest Hack Day Prayagraj 3.0</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

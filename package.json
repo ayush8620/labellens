@@ -1,0 +1,11 @@
+{
+  "name": "labellens",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Snap a food label, Google Gemma 4 (open-weight, multimodal) explains ingredients, allergens and diet fit in English/Hindi.",
+  "keywords": ["gemma", "gemma-4", "gemini-api", "multimodal", "food-label", "health", "hacktoberfest"],
+  "scripts": { "dev": "node server.js" },
+  "engines": { "node": ">=18" },
+  "author": "Ayush Yadav",
+  "license": "MIT"
+}
